@@ -1,5 +1,5 @@
 class Song < ActiveRecord::Base
-  validates :name, presence: true
+  validates :song_name, presence: true
 
   belongs_to :album
 
