@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   def login(user)
     user.reset_session!
     session[:session_token] = user.session_id
-    redirect_to user_url(user)
+    redirect_to bands_url
   end
 
 

@@ -32,6 +32,7 @@ module ApplicationHelper
       #{delete_it}
       #{safe_form}
       <button>Sign out</button>
+    </form>
     HTML
   end
 

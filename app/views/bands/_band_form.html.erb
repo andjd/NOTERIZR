@@ -1,0 +1,10 @@
+<!-- requires band, method -->
+
+<form action="<%= bands_url %>", method="POST">
+  <%= method = :post ? post_it : patch_it %>
+  <%= safe_form %>
+  <label>Band Name
+    <input type="text" name="band[band_name]" value="<%=band.band_name%>">
+  </label>
+  <button>Rock On!</button>
+</form>

@@ -1,0 +1,24 @@
+<!-- Requires listable, list_name -->
+
+<h2> <%= listable.first.class.to_s.pluralize %> </h2>
+
+<!-- Return One Level UP -->
+
+  <ul>
+
+    <% listable.each do |item| %>
+
+    <li>
+      <a href="<%= send((item.class.to_s.downcase + "_url"), item) %>">
+        <%= item.send(item.class.to_s.downcase + "_name") %>
+     </a>
+   </li>
+
+   <% end %>
+
+   <li>
+     <a href="<%= send("new_" + listable.first.class.to_s.downcase + "_url") %>">
+       New
+    </a>
+  </li>
+</ul>
