@@ -1,0 +1,19 @@
+<!-- requires action, user, and mode locals -->
+<form action="<%= action %>" method="POST">
+  <%= safe_form %>
+  <%= post_it %>
+  <p>
+    <label>E-mail
+      <input type="text" name="user[user_email]" value="<%= user.user_email %>"
+    </label>
+  </p>
+
+  <p>
+    <label>Password
+      <input type="password" name="user[password]">
+    </label>
+  </p>
+
+  <button><%= mode %></button>
+
+  </form>
